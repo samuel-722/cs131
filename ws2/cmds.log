@@ -1,0 +1,228 @@
+    1  passwd
+    2  passwd
+    3  wget www.github.com
+    4  cat index.html
+    5  ls
+    6  ls -l index.html
+    7  pwd
+    8  man pwd
+    9  man
+   10  pwd
+   11  man
+   12  man ls
+   13  ls -latr
+   14  ls
+   15  ls -lat
+   16  man ls
+   17  man ls -latr
+   18  wget github.com
+   19  ls
+   20  cd ~/Desktop
+   21  cd C:\Users\samue\OneDrive\Desktop\cs131
+   22  cd /c/Users/samue/OneDrive/Desktop/cs131
+   23  ls
+   24  cd .
+   25  ls
+   26  cd .
+   27  ls
+   28  status
+   29  git status
+   30  wtf
+   31  mkdir 0828
+   32  ls
+   33  cd 0828
+   34  ls
+   35  touch aa.txt
+   36  touch bb.txt
+   37  touch cc.jpeg
+   38  ls
+   39  ls ?.text
+   40  ls ?.txt
+   41  ls -l
+   42  ls
+   43  ls -l *.txt
+   44  touch samuel.txt
+   45  ls *(6).txt
+   46  ls *6.txt
+   47  ls 6*.txt
+   48  *[6]/txt
+   49  *[6].txt
+   50  ls 6*.txt
+   51  ls s*.txt
+   52  ls *[1-6.txt
+   53  ls *[1-6].txt
+   54  ls *[1-7].txt
+   55  ls *{6}.txt
+   56  ls
+   57  nano cmds.log
+   58  less cmds.log
+   59  history
+   60  vim
+   61  cd.
+   62  cd .
+   63  ls
+   64  cd /
+   65  ls
+   66  cd .
+   67  ls
+   68  cd /c/Users/samue/OneDrive/Desktop/cs131
+   69  cd ~
+   70  ls
+   71  cd
+   72  ls
+   73  cd ..
+   74  ls
+   75  cd ..
+   76  ls
+   77  cd ..
+   78  ls
+   79  ls
+   80  echo "# test" >> README.md
+   81  ls
+   82  git init
+   83  mkdir cs131
+   84  ls
+   85  cd cs131
+   86  ls
+   87  git init
+   88  git add README.md
+   89  ls
+   90  git
+   91  echo "# test" >> README.md
+   92  git init
+   93  git add README.md
+   94  git commit -m "first commit"
+   95  git config --global "samuel-722"
+   96  git config --global user.email "samuelar722@gmail.com"
+   97  git config --global user.name "samuel-722"
+   98  git commit -m "first commit"
+   99  git branch -M main
+  100  git remote add origin https://github.com/samuel-722/test.git
+  101  git push -u origin main
+  102  mkdir ws1
+  103  ls
+  104  cd ws1
+  105  history cmds.log
+  106  wget www.github.com
+  107  ls
+  108  cd cs131
+  109  ls
+  110  cd ..
+  111  cd cs131
+  112  ls
+  113  cd ~
+  114  ls
+  115  cd cs131
+  116  ls
+  117  cd ..
+  118  rm -rf cs131
+  119  ls
+  120  rm index.html index.html.2 README.md
+  121  ls
+  122  rm -rf 0828
+  123  ls
+  124  rm index.html.1
+  125  ls
+  126  mkdir cs131
+  127  ls
+  128  cd cs131
+  129  echo "# cs131" >> README.md
+  130  git init
+  131  git add README.md
+  132  git commit -m "first commit"
+  133  git branch -M main
+  134  git remote add origin https://github.com/samuel-722/cs131.git
+  135  git push -u origin main
+  136  mkdir ws1
+  137  ls
+  138  git status
+  139  git add ws1
+  140  git status
+  141  cd ws1
+  142  history
+  143  history > cmds.log
+  144  ls
+  145  git status
+  146  git add .
+  147  git status
+  148  git commit -m "made ws1 and cmds.log"
+  149  git push
+  150  cd ..
+  151  cd..
+  152  cd ..
+  153  ls
+  154  cd cs131
+  155  ls
+  156  touch hellovim.txt
+  157  ls
+  158  ls
+  159  rm hellovim.txt
+  160  ls
+  161  mkdir 0830
+  162  ls
+  163  cd 0830
+  164  touch hellovim.txt
+  165  ls
+  166  vim hellovim.txt
+  167  ls
+  168  vim hellovim.txt
+  169  cat hellovim.txt
+  170  more hellovim.txt
+  171  touch example.txt
+  172  vim example.txt
+  173  cat example.txt
+  174  sort example.txt
+  175  cat example.txt
+  176  wc example.txt
+  177  man wc
+  178  uniq -c file.txt
+  179  uniq -c example.txt
+  180  man uniq
+  181  man grep
+  182  grep -i john example.txt
+  183  cat example.txt
+  184  ls
+  185  got status
+  186  git status
+  187  cd cs131
+  188  git status
+  189  git init
+  190  git status
+  191  git add ws2
+  192  mkdir ws2
+  193  ls
+  194  git add ws2
+  195  git status
+  196  cd ws2
+  197  ls
+  198  ls .
+  199  ls
+  200  git status
+  201  cp /datasets/taxidata.tar.gz
+  202* cp ws2/datasets/taxidata.tar
+  203  cp /datasets/taxidata.tar.gz .
+  204  ls
+  205  tar -xzf taxidata.tar.gz
+  206  ls
+  207  tar -xzf taxidata.tar.gz
+  208  grep '2019-03-12' yellow_tripdata_2019-03.csv > results.txt
+  209  tar -xvzf taxidata.tar.gz
+  210  ls
+  211  grep '2019-03-12' taxidata/*csv > results.txt
+  212   grep '2019-03-12' taxidata/*csv > results.txt
+  213  ls
+  214  cat results.txt
+  215  tail -n 20 results.txt
+  216  ls
+  217  cat results.txt
+  218  grep ".*,.*,\"2019-03-12.*" 2019-03.csv | tail -n 20 >> results.txt
+  219  grep ".*,.*,\"2019-03-12.*" taxidata/*.csv | tail -n 20 >> results.txt
+  220  ls
+  221  cat results.txt
+  222  ls
+  223  rm results.txt
+  224  ls
+  225  grep ".*,.*,\"2019-03-12.*" taxidata/*.csv | tail -n 20 >> results.txt
+  226  ls
+  227  cat results.txt
+  228  history > cmds.log
