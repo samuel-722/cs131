@@ -1,0 +1,58 @@
+  346  cd cs131
+  347  ls
+  348  mkdir a1
+  349  ls
+  350  git status
+  351  ls ws2
+  352  ..
+  353  cd ..
+  354  ls
+  355  echo $HOME
+  356  id
+  357  mkdir temp
+  358  chmod -x temp
+  359  cd temp
+  360  ls temp
+  361  cd ..
+  362  ls -l temp
+  363  ls
+  364  cd .
+  365  cd samuel23fa
+  366  ls
+  367  ls cs131
+  368  cd cs131
+  369  ls
+1)
+  370  cd a1
+  371  ls
+ 2)
+  373  echo $HOME
+3)
+  374  id
+4) 
+  375  mkdir temp
+  376  ls
+  377  chmod -x temp
+  378  ls
+  379  cd temp
+  380  ls temp
+  381  ls
+  382  ls -l temp) 
+5)
+  383  mkdir temp2
+  384  mv temp2 temp3
+6)
+  385  ls /proc/ | grep mem
+  386  ls /proc/ | grep cpu
+7)
+  387  head /proc/meminfo
+  388  MemTotal:       73080512 kB
+8) 
+  398  head /proc/cpuinfo
+  399  tail /proc/cpuinfo
+  400  cat /proc/cpuinfo
+9)
+  401  cat /etc/os-release
+  402  NAME="Red Hat Enterprise Linux"
+ 10)
+  418 ls -l /etc/os-release
