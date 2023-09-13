@@ -1,0 +1,33 @@
+  346  cd cs131
+  347  cd ws3
+//unpack the data set
+  349  cd taxidata.tar.gz
+  350  cat tail taxidata.tar.gz
+  352  tar -xzvf taxidata.tar.gz
+//cut the file so that its seperated by comma and only the 8th column
+  354  cut -d "," -f 8 taxidata/2019-01.csv > january.txt
+//sort and save only top 3
+  357  sort january.txt > sorted_january.txt
+  362  uniq -c sorted_january.txt | sort -nr > cs_january.txt
+  363  head cs_january.txt
+  364  head -n 3 cs_january.txt > task1.txt
+  367  rs january.txt
+//removing temporary files
+  368  rm january.txt
+  369  rm sorted_january.txt
+  370  rm cs_january.txt
+  376  rm -rf taxidata.tar.gz
+//cut the file so that its seperated by comma and 8th column only
+  378  cut -d "," -f 8 2019-02.csv > 1.txt
+  379  cut -d "," -f 8 taxidata/2019-02.csv > 1.txt
+//sort it and save only the top 3
+  381  sort 1.txt > 2.txt
+  383  uniq -c 2.txt | sort -nr > 3.txt
+  384  head -n 3 3.txt > task2.txt
+  385  ls
+  386  cat task2.txt
+//removing temporary files
+  387  rm 1.txt 
+  388  rm 2.txt
+  389  rm 3.txt
+  391  history > cmds.log
