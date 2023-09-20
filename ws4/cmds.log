@@ -1,0 +1,7 @@
+  538  mkdir FARE
+  541  cut -d"," -f8-9,11 2019-06.csv | grep "79.0,125.0" | cut -d"," -f3 > FARE/79.0-125.0.txt
+  547  cut -d"," -f8-9,11 2019-06.csv | grep "48.0,161.0" | cut -d"," -f3 > FARE/48.0-161.0.txt
+  558  awk '{ sum += $1; count++ } END { print sum/count }' FARE/79.0-125.0.txt > ws4.txt
+  559  awk '{ sum += $1; count++ } END { print sum/count }' FARE/48.0-161.0.txt >> ws4.txt
+  561  vi ws4.txt
+  562  history 30 > cmds.log
