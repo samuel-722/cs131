@@ -1,0 +1,13 @@
+  696  cd cs131
+  697  ls
+  698  cd ws5
+  699  ls
+ #get top 100
+  700  grep '234.0' 2019-09.csv | sort -k2,2 -rn | uniq -c | head -n 100 > dropoff.txt
+  702  cat dropoff.txt
+ #this didnt work at all
+  705  while read count dropoff_location; do grep "dropoff_location" 2019-09.csv > do234/$dropoff_location.txt; done
+ #this gave me a huge amount of errors 
+  736  while IFS=, read -a fields; do pickup_location="${fields[7]}"; dropoff_location="${fields[8]}"; touch "cs131/ws5/do234/${dropoff_location}.txt"; grep ",$dropoff_location" 2019-09.csv > "cs131/ws5/do234/${dropoff_location}.txt"; done < dropoff.txt
+  737  ls
+  740  history 100 > cmds.log
