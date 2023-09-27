@@ -1,0 +1,19 @@
+  task 1:
+  783  grep "2019-05-11" 2019-05.csv | cut -d"," -f17 | awk '{sum += 1; count++} END {print "average on 05-11-2019:", sum / count}' > a2.txt
+
+  task 2:
+  785  grep "2019-05-11" 2019-05.csv | cut -d"," -f17 | sort -nr | head -n 1 >> a2.txt
+  
+  task 3:
+  788  awk -F "," '$4 >= 3 {print $9}' 2019-05.csv | sort | uniq -c | sort -nr | head -n 10 >> a2.txt
+  
+  task 4:
+  790  grep "2019-05-20" 2019-05.csv | cut -d"," -f8 | sort -nr | head -n 1 >> a2.txt
+
+  task 5:
+  792  for month in taxidata/*.csv; do cut -d ',' -f8 "$month" | sort | uniq -c | sort -nr >> counts.txt; done
+  795  head -n 1 counts.txt >> a2.txt
+  
+  task 6:
+  796  vi a2.txt 
+  800  history 35 > cmds.log
