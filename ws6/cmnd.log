@@ -1,0 +1,13 @@
+  963  cd cs131/ws6
+  970  head -5 2019-11.csv
+
+  972  sed -n '/^2\.0,/p' 2019-11.csv > vendor2.csv #process 1
+  974  wc vendor2.csv #output 1
+
+  980  sed 's/[:,\"]/ /g' 2019-11.csv > no-seperators.csv #process 2
+  981  head -10 no-seperators.csv #output 2
+
+  983  sed 's/\.\([0-9]*\)/ \1/g' no-seperators.csv > no-fractions.csv #process 3
+  984  head -10 no-fractions.csv #output 3
+
+  986  history | tail -n 25 > cmnd.log
