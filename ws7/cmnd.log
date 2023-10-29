@@ -1,0 +1,8 @@
+ 1001  head -3 2019-12.csv
+ 1003  awk -F ',' {if ($17 >= 10.0) tips[$14]++} END {for (i in tips) print i, tips[i]}' 2019-12.csv > results.txt
+ 1004* 
+ 1008  mv results.txt unsorted_results.txt #decided to sort results
+ 1010  sort -nr unsorted_results.txt > results.txt
+ 1015  head -20 results.txt
+ 1017  sort -nr -k2 unsorted_results.txt | head -n 20 > ws7.txt #sorted by frequency
+ 1023  history 40 > cmnd.log
