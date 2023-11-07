@@ -1,0 +1,24 @@
+  #task 1
+  988  tail -n +2 2019-08.csv | sort -t, -k17,17nr | head -10 > a3.txt
+  991  awk -F ',' '{ sum += $3, count++ } END {print "Average Total: ", sum/count}' 2019-08.csv >> a3.txt
+  993  tail -n +2 2019-08.csv | sort -t, -k17,17nr | head -10 > a3.txt
+ 1001  mv a3.txt topten.csv
+ 1016  cut -d, -f8,8 topten.csv > a3.txt #extracted pickup location
+ 1017  awk -F ',' ' { location[$8] += $17; count[$8]++ } END { for (i in location) print i, location[i]/count[i] }' topten.csv >> a3.txt
+ #task 2
+ 1021  awk -F',' '{sum[$8","$9]+=$17; count[$8","$9]++} END { for (i in sum) print i "," sum[i]/count[i]}' 2019-08.csv | sort -t',' -k8,9 -nr | tail -n +2 | head -n 1 >> a3.txt
+ 1023  vi a3.txt
+
+#task 4
+ 1024  vi task3.plt    #decided to to task 4 before task 3, so i switched the name 
+ 1025  mv task3.plt task4.plt
+ 1026  vi task4.plt
+ 1027  awk -F',' '{ distances[$5] += 1; total_amount[$5] += $17 } END { for (d in distances) print d, total_amount[d]/distances[d] }' 2019-08.csv > task4.txt
+ 
+#task 3
+ 1028  vi task3.plt
+ 1029  awk -F',' '{ passengers[$4] += 1; total_tip[$14] += $14 } END { for (p in passengers) print p, total_tip[p]/passengers[p] }' 2019-08.csv > task3.txt
+ 1030  vi task3.plt
+ 1031  gnuplot task3.plt
+ 1032  gnuplot task4.plt
+ 1038  history | tail -n 60 > cmds.log

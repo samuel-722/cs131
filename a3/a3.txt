@@ -1,0 +1,21 @@
+#top 10 pickup locations with highest average total amount
+138.0
+264.0
+48.0
+264.0
+145.0
+265.0
+161.0
+246.0
+145.0
+264.0
+#average total amount paid by customers per pickup location
+145.0 1386.05
+138.0 411043
+265.0 960.8
+48.0 2008.3
+264.0 1631.3
+161.0 960.68
+246.0 920.3
+#step 2: the pickup location, dropoff location, and their average total amount
+99.0,231.0,67.8
