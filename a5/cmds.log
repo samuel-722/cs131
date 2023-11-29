@@ -31,3 +31,5 @@
  1119  gnuplot danceVSmonth.gp
  1122  history | tail -n 80 > cmds.log
  1123  vi cmds.log
+ 1125  awk -F, '{sum[$5]+=$13; count[$5]++} END {for (i in sum) print i, sum[i]/count[i]}' spotify-sorted.csv > spotify-summed.csv
+
