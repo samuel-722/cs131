@@ -1,0 +1,33 @@
+#pull the dataset that i got and uplouded to github
+  998  git pull
+ 1000  cd a5
+ 1002  head -3 spotify.csv
+
+#since i want to only use spotify data, i removed all the non-spotify chart related columns
+ 1005  cut -d, -f 1-9,15- spotify.csv > spotify-cleaned.csv
+
+#I had problem with commas inside parenthases, so I replaced any comma inside parenthases with 'and'
+ 1057  sed ':a;s/\("[^"]*\),\([^"]*"\)/\1 and \2/;ta' spotify-cleaned.csv > spotify-fixed.csv
+
+#filter out any song not made in 2023, then sort by dancability and liveness
+1077  awk -F ',' 'NR == 1 || $4 == 2023' spotify-fixed.csv > spotify-2023.csv
+ 1079  sort -t ',' -k 13,13nr -k 18,18nr spotify-2023.csv > spotify-sorted.csv
+
+#make a seperate datafile with only the essential columns (so its easier on the eyes), and then a metadata file
+ 1080  cut -d ',' -f 1,2,9,13,18 spotify-sorted.csv > spotify-essential.csv
+ 1087  wc -l spotify-sorted.csv >> metadata.txt
+ 1088  vi metadata.txt
+ 1089  head -1 spotify-2023.csv >> metadata.txt
+ 1094  awk -F',' '{print $1,$9}' spotify-sorted.csv | head -1 >> metadata.txt
+ 1095  vi metadata.txt
+
+#gnuplot
+ 1096  vi liveVSdance.gp
+ 1097  vi danceVSmonth.gp
+ 1105  head -10 spotify-sorted.csv > spotify-graphed.csv
+ 1107  vi liveVSdance.gp
+ 1108  vi danceVSmonth.gp
+ 1112  gnuplot liveVSdance.gp
+ 1119  gnuplot danceVSmonth.gp
+ 1122  history | tail -n 80 > cmds.log
+ 1123  vi cmds.log

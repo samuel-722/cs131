@@ -1,0 +1,4 @@
+Number Entries: 159 in spotify-sorted.csv
+Features: track_name,artist(s)_name,artist_count,released_year,released_month,released_day,in_spotify_playlists,in_spotify_charts,streams,bpm,key,mode,danceability_%,valence_%,energy_%,acousticness_%,instrumentalness_%,liveness_%,speechiness_%
+
+Name and number of streams of the most danceable and liveness song: Shorty Party 33
